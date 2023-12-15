@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My first web page</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;500;700&display=swap"  rel="stylesheet">
+
+<style>
+  html{
+      font-size: 16px;
+  }
+
+  body{
+      margin:0;
+      padding:0;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 401 ;
+      font-size: 1rem;
+  }
+
+  h1,h2,h3,h4,h5,h6{
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      color: #222222;
+  }
+
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.75rem; }
+  h4 { font-size: 1.5rem; }
+  h5 { font-size: 1.25rem; }
+  h6 { font-size: 1rem; }
+
+  a{
+      text-decoration: none;
+      color:#3F83F8;  
+  }  
+
+  a:hover, a:focus{
+      color:#1A56DB;
+  }
+
+  #navbar{
+      padding:8px;
+      margin:0;
+  }
+
+  #logo{
+      height:30px;
+  }
+
+  h1 {
+      text-align: center;
+      color: rgb(0, 142, 157);
+  }
+
+  #banner {
+      width:100%;
+      object-fit: cover; 
+  }
+
+  #about{
+      display:flex;
+      max-width: 800px;
+      margin:0 auto;
+      padding-right: 8px;
+  }
+
+  #description{
+      width:50%;
+      padding: 0 8px;
+      font-size: 1.25rem;
+  }
+
+  #team{
+      width:50%;
+  }
+
+  #team-image{
+      border-radius: 5px;
+      width: 100%;
+  }
+
+  #jobs-table{
+      width: 100%;
+      border: 1px solid gray;
+      border-collapse: collapse;
+  }
+
+  .jobs-header-row th{
+      border-right:1px solid gray;
+      padding:4px 8px;
+      background-color: #C3DDFD;
+      text-align: center;
+      color: #222222;  
+  }
+
+  .jobs-data-row td{
+      border:1px solid gray;
+      padding: 4px 8px;
+  }
+
+  #jobs-table tr:nth-child(odd){
+      background-color: #EBF5FF;
+  }
+
+  h2{
+      text-align: center;
+  }
+
+  #application{
+      max-width: 800px;
+      margin: 0 auto; /*When page dragged, stays consistent (balanced left & right)*/
+      padding: 0 8px; /* To prevent it from being at leftmost edge*/
+  }
+
+  .form-group{
+      margin: 16px 0;
+  }
+
+  #application-form label{
+     font-weight: 600;
+
+  }
+
+  #application-form input, select, textarea{
+      padding: 4px;
+      font-size: 1.25rem;
+      margin-top: 4px;
+      border-radius: 5px;
+      border: 1px solid gray;
+  }
+
+  .form-group textarea{
+      width: 80%;
+      font-family: 'Roboto',sans-serif;
+  }
+
+  .form-group input[type="checkbox"]{
+      width: 16px;
+      height: 16px;
+  }
+
+  .form-group [type="submit"]{
+      background-color: #3F83F8;
+      color:white;
+      font-weight: 500;
+      cursor: pointer;
+
+  }
+
+  #jobs{
+      max-width: 1000px;
+      margin: 0 auto; 
+      padding: 0 10px;
+      font-size: 1.25rem;
+  }
+
+  h3{
+      margin-bottom: 2px;
+      margin-top: 0;
+  }
+
+  .apply{
+      float: right;
+  }
+
+  #footer{
+      background-color: #FAFAFA;
+      padding: 8px;
+      margin-top: 30px;
+      text-align: center;
+  }
+
+  #footer-links{
+      list-style: none;
+  }
+
+  #footer-links li{
+      display: inline;
+      margin: 0 15px;
+  }
+
+  .copyright{
+      color: #6B7280;
+      font-size: 0.88rem;
+  }
+
+  
+</style>
+  
+</head>
+
+<body>
+  <div id="navbar">
+    <img id="logo" alt="Jovian logo" src="https://i.imgur.com/m1wXjqw.png" height="">
+
+  </div>
+  <img id="banner" src="https://james-careers-website.hudibyojames.repl.co/static/Banner.jpg" alt="Banner" height="240">
+  <h1>About Jovian</h1>
+
+  <div id="about">
+    <div id="description">
+      <p style="margin-top: 0px;">At Jovian, we're on a mission to build
+        the world's most highly reputed technical
+        university, and we're building it completely
+        online. We offer several beginner friendly
+        courses that are taken by 300,000+ registered
+        users.
+      </p>
+      <p>
+        We also offer 2 focused bootcamps:
+        <ol>
+          <li>
+
+              <a href="https://www.jovian.com/full-stack-developer-bootcamp">
+                Jovian Full Stack Developer Bootcamp
+              </a>
+            <ul>
+              <li> Sublist!</li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://www.jovian.com/data-science-bootcamp">
+              Jovian Data Science Bootcamp
+            </a>
+
+
+          </li>
+        </ol>
+      </p>
+    </div>
+    <div id="team">
+      <img id="team-image" src="https://james-careers-website.hudibyojames.repl.co/static/team.jpg" alt="team">
+    </div>
+  </div>
+
+
+  <h2>Job Opportunities:</h2>
+  <div id="jobs">
+    <table id="jobs-table">
+      <tr class="jobs-header-row">
+        <th rowspan="2">Job title</th>
+        <th colspan="2">Location</th>
+        <th rowspan="2">Salary</th>
+        <th rowspan = "2">Posted on</th>
+      </tr> 
+
+      <tr class="jobs-header-row">
+        <th>City</th>
+        <th>Country</th>
+      </tr>
+
+      <tr class="jobs-data-row">
+        <td> Frontend developer</td>
+        <td> Toronto</td>
+        <td> Canada</td>
+        <td> $100,000</td>
+        <td> Mar 4, 2023</td>
+      </tr>
+
+
+      <tr class="jobs-data-row">
+        <td> Backend Developer</td>
+        <td> Surabaya</td>
+        <td> Indonesia</td>
+        <td> $200,000</td>
+        <td> Mar 5, 2023</td>
+      </tr>
+
+      <tr class="jobs-data-row">
+        <td> Data Scientist</td>
+        <td> Tokyo</td>
+        <td> Japan</td>
+        <td> $157,000</td>
+        <td> Mar 7, 2023</td>
+      </tr>
+
+      <tr class="jobs-data-row">
+        <td> ML engineer</td>
+        <td colspan="2"> Remote</td>
+        <td> $85,000</td>
+        <td> Mar 20, 2023</td>
+      </tr>
+
+
+    </table>
+  </div>
+
+  <div id="application">
+    <h2> Submit your applicaton </h2>
+
+    <!-- TODO - Sample form - remove later -->
+    <form id="application-form">
+      <div class="form-group">
+        <label for="name">Full name </label><br>    <!-- label is inline elem like span, cannot apply margin to it -->
+        <input type="text" id="name" name="Full name" required placeholder="James">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="Email address" required placeholder="hudibyojames@gmail.com">
+      </div>
+
+      <div class="form-group">
+         <label for="phone">Phone</label><br>
+         <input type="tel" id="phone" name="Phone number" required placeholder="+61 437 754 344">
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Date of Birth</label><br>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+
+
+      <div class="form-group">
+        <label for="position">Position Applied for</label><br>
+        <select id="position" name="position" required>
+          <option value="">Select an option</option>
+          <option value="Frontend Developer">Frontend Developer</option>
+          <option value="Full Stack Developer">Full Stack Developer</option>
+          <option value="Data Scientist">Data Scientist</option>
+          <option value="ML Engineer">ML Engineer</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="resume">Upload Resume</label><br>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+      </div>
+
+      <div class="form-group">
+        <label for="coverletter">Cover Letter</label><br>
+        <textarea id="coverletter" name="coverletter" rows="5" placeholder="Explain what makes you suitable for the job.."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="terms">
+          <input type="checkbox" id="terms" name="terms" required>
+          I agree to the terms and conditions
+        </label>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" value="Submit Application">
+      </div>
+    </form>
+
+  </div>
+
+
+
+  <div id ="footer">
+    <ul id="footer-links">
+      <li>
+        <a href="https://jovian.com/learn" target="_blank">
+          Courses
+        </a>
+
+      </li>
+      <li>
+        <a href="https://jovian.com/learn" target="_blank">
+          Programs
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/@jovianhq" target="_blank">
+          Youtube
+        </a>
+      </li>
+    </ul>
+    <span class="copyright">© 2023, Jovian</span>
+  </div>
+
+
+
+
+</body>
+
+</html>
