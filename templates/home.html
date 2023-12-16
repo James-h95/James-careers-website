@@ -58,6 +58,7 @@
           max-width: 1000px;
           margin:0 auto;
           padding-right: 8px;
+          margin-bottom: 10px;
       }
 
       #description{
@@ -240,7 +241,7 @@
 
   <h1  class="mt-4 mb-4 display-4">Open Positions</h1
                                                    
-  <div> 
+  <div style="padding:10px;"> 
     {% for job in jobs %}                                    
      {%include 'jobitem.html'%} 
     {% endfor %}
