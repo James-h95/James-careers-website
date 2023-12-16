@@ -18,14 +18,9 @@
     }
       h1,h2,h3,h4,h5,h6{
           font-family: 'Inter', sans-serif;
+          font-weight: 500;
       }*/
 
-      h1 { font-size: 2.5rem; }
-      h2 { font-size: 2rem; }
-      h3 { font-size: 1.75rem; }
-      h4 { font-size: 1.5rem; }
-      h5 { font-size: 1.25rem; }
-      h6 { font-size: 1rem; }
 
       a{
           text-decoration: none;
@@ -199,11 +194,12 @@
 <body>
   <div id="navbar">
     <img class="img-fluid" id="logo" alt="Jovian logo" src="https://i.imgur.com/m1wXjqw.png" height="">
+    <h1 class="mt-2 mb-4 display-1">{{company_name}} Careers</h1>
   </div >
 
   <!-- <div class="container"> -->
 <img id="banner" src="https://james-careers-website.hudibyojames.repl.co/static/Banner.jpg" alt="Banner" height="240">
-<h1 class= "text-center mt-2 mb-4 display-2" >About Jovian</h1>
+<h1 class= "text-center mt-2 mb-4 display-4" >About Jovian</h1>
   
 <div id="about">
     <div id="description">
@@ -242,123 +238,21 @@
   </div>
 
 
-  <h2  class="mt-4 mb-4 display-3">Job Opportunities:</h2>
-  <div id="jobs">
-    <table id="jobs-table">
-      <tr class="jobs-header-row">
-        <th rowspan="2">Job title</th>
-        <th colspan="2">Location</th>
-        <th rowspan="2">Salary</th>
-        <th rowspan = "2">Posted on</th>
-      </tr> 
-
-      <tr class="jobs-header-row">
-        <th>City</th>
-        <th>Country</th>
-      </tr>
-
-      <tr class="jobs-data-row">
-        <td> Frontend developer</td>
-        <td> Toronto</td>
-        <td> Canada</td>
-        <td> $100,000</td>
-        <td> Mar 4, 2023</td>
-      </tr>
-
-
-      <tr class="jobs-data-row">
-        <td> Backend Developer</td>
-        <td> Surabaya</td>
-        <td> Indonesia</td>
-        <td> $200,000</td>
-        <td> Mar 5, 2023</td>
-      </tr>
-
-      <tr class="jobs-data-row">
-        <td> Data Scientist</td>
-        <td> Tokyo</td>
-        <td> Japan</td>
-        <td> $157,000</td>
-        <td> Mar 7, 2023</td>
-      </tr>
-
-      <tr class="jobs-data-row">
-        <td> ML engineer</td>
-        <td colspan="2"> Remote</td>
-        <td> $85,000</td>
-        <td> Mar 20, 2023</td>
-      </tr>
-
-
-    </table>
+  <h1  class="mt-4 mb-4 display-4">Open Positions</h1
+                                                   
+  <div> 
+    {% for job in jobs %}                                    
+     {%include 'jobitem.html'%} 
+    {% endfor %}
   </div>
 
-  <div id="application">
-    <h2> Submit your applicaton </h2>
-
-    <!-- TODO - Sample form - remove later -->
-    <form id="application-form">
-      <div class="form-group">
-        <label for="name">Full name </label><br>    <!-- label is inline elem like span, cannot apply margin to it -->
-        <input type="text" id="name" name="Full name" required placeholder="James">
-      </div>
-
-      <div class="form-group">
-        <label for="email">Email</label><br>
-        <input type="email" id="email" name="Email address" required placeholder="hudibyojames@gmail.com">
-      </div>
-
-      <div class="form-group">
-         <label for="phone">Phone</label><br>
-         <input type="tel" id="phone" name="Phone number" required placeholder="+61 437 754 344">
-      </div>
-
-      <div class="form-group">
-        <label for="dob">Date of Birth</label><br>
-        <input type="date" id="dob" name="dob" required>
-      </div>
-
-
-      <div class="form-group">
-        <label for="position">Position Applied for</label><br>
-        <select id="position" name="position" required>
-          <option value="">Select an option</option>
-          <option value="Frontend Developer">Frontend Developer</option>
-          <option value="Full Stack Developer">Full Stack Developer</option>
-          <option value="Data Scientist">Data Scientist</option>
-          <option value="ML Engineer">ML Engineer</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="resume">Upload Resume</label><br>
-        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
-      </div>
-
-      <div class="form-group">
-        <label for="coverletter">Cover Letter</label><br>
-        <textarea id="coverletter" name="coverletter" rows="5" placeholder="Explain what makes you suitable for the job.."></textarea>
-      </div>
-
-      <div class="form-group">
-        <label for="terms">
-          <input type="checkbox" id="terms" name="terms" required>
-          I agree to the terms and conditions
-        </label>
-      </div>
-
-      <div class="form-group">
-        <input type="submit" value="Submit Application">
-      </div>
-    </form>
     
-    <button type="button" class="btn btn-primary">Contact us </button>
+    <div class="text-center">
+       <button type="button" class="btn btn-primary btn-lg">Contact us </button>
+    </div>
+
+
     
-
-  </div>
-
-
-
   <div id ="footer">
     <ul id="footer-links">
       <li>
