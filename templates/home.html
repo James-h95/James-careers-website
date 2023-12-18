@@ -14,7 +14,7 @@
   <style>
       
     body{
-        font-family: 'Roboto', sans-serif;
+      
     }
       h1,h2,h3,h4,h5,h6{
           font-family: 'Inter', sans-serif;
@@ -204,16 +204,15 @@
   {% include 'nav.html' %}
   <div id="navbar">
     <img class="img-fluid" id="logo" alt="Jovian logo" src="https://i.imgur.com/m1wXjqw.png" height="">
-    <h1 class="mt-2 mb-4 display-1">{{company_name}} Careers</h1>
   </div >
 
   <!-- <div class="container"> -->
 <img id="banner" src="https://james-careers-website.hudibyojames.repl.co/static/Banner.jpg" alt="Banner" height="240">
-<h1 class= "text-center mt-2 mb-4 display-4" >About Jovian</h1>
+<h1 class= "text-center mt-2 mb-4 display-2" >{{company_name}} Careers</h1>
   
 <div id="about">
     <div id="description">
-      <p class="lead" style="margin-top: 0px ;">At Jovian, we're on a mission to build
+      <p class="lead" style="margin-top: 0px ;">At {{company_name}}, we're on a mission to build
         the world's most highly reputed technical
         university, and we're building it completely
         online. We offer several beginner friendly
@@ -228,9 +227,6 @@
               <a href="https://www.jovian.com/full-stack-developer-bootcamp">
                 Jovian Full Stack Developer Bootcamp
               </a>
-            <ul>
-              <li> Sublist!</li>
-            </ul>
           </li>
           <li>
             <a href="https://www.jovian.com/data-science-bootcamp">
