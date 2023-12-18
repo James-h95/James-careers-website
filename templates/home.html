@@ -50,7 +50,7 @@
       #banner {
           width:100%;
           object-fit: cover;
-          height: 330px;
+          height: 360px;
       }
 
       #about{
@@ -58,22 +58,30 @@
           max-width: 1000px;
           margin:0 auto;
           padding-right: 8px;
-          margin-bottom: 10px;
+          margin-bottom: 5px;
       }
 
       #description{
-          width:50%;
+          /*width:50%;*/
           padding: 0 8px;
           font-size: 1.25rem;
       }
 
       #team{
-          width:50%;
+          /*width:50%;*/
       }
 
       #team-image{
           border-radius: 5px;
           width: 100%;
+      }
+
+      #open-jobs{
+          max-width: 1000px;
+          margin:0 auto;
+          padding-right: 8px;
+          margin-bottom: 5px;
+
       }
 
       #jobs-table{
@@ -193,6 +201,7 @@
 </head>
 
 <body>
+  {% include 'nav.html' %}
   <div id="navbar">
     <img class="img-fluid" id="logo" alt="Jovian logo" src="https://i.imgur.com/m1wXjqw.png" height="">
     <h1 class="mt-2 mb-4 display-1">{{company_name}} Careers</h1>
@@ -233,48 +242,26 @@
         </ol>
       </p>
     </div>
-    <div id="team">
+    <div class="d-none d-md-block col-md-6"  id="team">
       <img class="img-fluid" id="team-image" src="https://james-careers-website.hudibyojames.repl.co/static/team.jpg" alt="team">
     </div>
   </div>
 
-
-  <h1  class="mt-4 mb-4 display-4">Open Positions</h1
-                                                   
+<div id="open-jobs">
+  <h1  class="mt-4 mb-4 display-4">Open Positions</h1>                                               
   <div style="padding:10px;"> 
     {% for job in jobs %}                                    
      {%include 'jobitem.html'%} 
     {% endfor %}
   </div>
+</div>
 
     
     <div class="text-center">
-       <button type="button" class="btn btn-primary btn-lg">Contact us </button>
+       <a href="mailto:hudibyojames@gmail.com?subject=Job%20Enquiry&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20question%3A%20%3CEnter%20your%20question%3E%0D%0A%0D%0AMy%20preferred%20cuisine%3A%20%3CEnter%20preferred%20cuisine%3E" type="button" class="btn btn-primary btn-lg">Contact us </a>
     </div>
 
-
-    
-  <div id ="footer">
-    <ul id="footer-links">
-      <li>
-        <a href="https://jovian.com/learn" target="_blank">
-          Courses
-        </a>
-
-      </li>
-      <li>
-        <a href="https://jovian.com/learn" target="_blank">
-          Programs
-        </a>
-      </li>
-      <li>
-        <a href="https://www.youtube.com/@jovianhq" target="_blank">
-          Youtube
-        </a>
-      </li>
-    </ul>
-    <p class="copyright text-center mt-4">© 2023, Jovian</p>
-  </div>
+{% include 'footer.html' %}
 
 
 
