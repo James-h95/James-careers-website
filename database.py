@@ -1,7 +1,8 @@
 # Code to connect & extract data from DB. Using SQL alchemy.
 from sqlalchemy import create_engine, text
+import os
 
-db_connection_string = "mysql+pymysql://trucqkh86khixzq43yfm:pscale_pw_eAQqtnBiHxoJfHun5VLtcFPoWbNrwddYoQAB9WovpmJ@aws.connect.psdb.cloud/jamescareers?charset=utf8mb4"
+db_connection_string = os.environ['DB_CONNECTION_STRING']
 
 engine = create_engine(
   db_connection_string, 
@@ -11,7 +12,13 @@ engine = create_engine(
   }
 })
 
-with engine.connect() as conn:
+def load_jobs_from_db():
+  with engine.connect() as conn:
     result = conn.execute(text("select * from jobs"))
-    print(result.all())
-  
+
+    jobs = []
+    for row in result.all():
+      jobs.append(row._asdict())
+
+    return jobs
+
