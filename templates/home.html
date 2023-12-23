@@ -3,12 +3,7 @@
 
 <head>
   <!-- Meta tags -->
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  {% include 'bootstrap.html' %}
 
   <!-- style tag-->
   <style>
@@ -47,11 +42,6 @@
           
       }
 
-      #banner {
-          width:100%;
-          object-fit: cover;
-          height: 360px;
-      }
 
       #about{
           display:flex;
@@ -202,13 +192,8 @@
 
 <body>
   {% include 'nav.html' %}
-  <div id="navbar">
-    <img class="img-fluid" id="logo" alt="Jovian logo" src="https://i.imgur.com/m1wXjqw.png" height="">
-  </div >
-
-  <!-- <div class="container"> -->
-<img id="banner" src="https://james-careers-website.hudibyojames.repl.co/static/Banner.jpg" alt="Banner" height="240">
-<h1 class= "text-center mt-2 mb-4 display-2" >{{company_name}} Careers</h1>
+{% include 'Banner.html' %}
+<h1 class= "text-center mt-2 mb-4 display-2" > pH Careers</h1>
   
 <div id="about">
     <div id="description">
