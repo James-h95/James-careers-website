@@ -33,6 +33,57 @@ def load_job_from_db(id):
     else:
       return dict(rows[0])
 
+'''
+def add_application_to_db(job_id, data):
+  with engine.connect() as conn:
+    query = text("INSERT INTO applications (job_id, full_name, email, linkedin_url, education, work_experience, resume_url ) VALUES (:job_id, :full_name, :email, :linkedin_url, :education, :work_experience, :resume_url)")
+
+  conn.execute(query,
+               job_id=job_id ,
+               full_name=data['full_name'], 
+               email=data['email'], 
+               linkedin_url=data['linkedin_url'], 
+               education=data['education'], 
+               work_experience=data['work_experience'], 
+               resume_url=data['resume_url'])
+'''
+
+def add_application_to_db(job_id, data):
+  with engine.connect() as conn:
+      query = text("""
+          INSERT INTO applications (
+              job_id, 
+              full_name, 
+              email, 
+              linkedin_url, 
+              education, 
+              work_experience, 
+              resume_url
+          ) VALUES (
+              :job_id, 
+              :full_name, 
+              :email, 
+              :linkedin_url, 
+              :education, 
+              :work_experience, 
+              :resume_url
+          )
+      """)
+
+      # Prepare a dictionary of parameters
+      params = {
+          'job_id': job_id,
+          'full_name': data.get('full_name'),
+          'email': data.get('email'),
+          'linkedin_url': data.get('linkedin_url'),
+          'education': data.get('education'),
+          'work_experience': data.get('work_experience'),
+          'resume_url': data.get('resume_url')
+      }
+
+      # Execute the query with the parameters
+      conn.execute(query, params)
+
 
 
 
